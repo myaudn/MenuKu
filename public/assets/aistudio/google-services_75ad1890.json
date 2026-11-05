@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "598222896156",
+    "project_id": "menuku-9b521",
+    "storage_bucket": "menuku-9b521.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:598222896156:android:3712e0fca6a8f2cff833d9",
+        "android_client_info": {
+          "package_name": "com.aistudio.menuku.daprkx"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCEowQg-JjQZNo5bHWKy9DhVk9neyJbts"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

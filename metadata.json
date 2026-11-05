@@ -1,0 +1,6 @@
+{
+  "name": "MenuKu",
+  "description": "Asisten dapur pintar untuk mengelola resep masakan, merencanakan jadwal makan mingguan, melacak inventaris bahan dapur, daftar belanja, dan jurnal cerita rasa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

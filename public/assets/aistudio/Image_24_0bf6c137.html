@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "outline-variant": "#bfcaba", "error": "#ba1a1a", "primary-container": "#2e7d32", "background": "#fafaf4", "inverse-primary": "#88d982", "secondary-container": "#fc820c", "on-tertiary-container": "#ccffc3", "on-tertiary": "#ffffff", "on-primary-container": "#cbffc2", "tertiary-fixed": "#9df898", "on-surface": "#1a1c19", "primary-fixed-dim": "#88d982", "inverse-on-surface": "#f1f1ec", "on-primary-fixed": "#002204", "secondary-fixed": "#ffdcc6", "on-primary-fixed-variant": "#005312", "inverse-surface": "#2f312e", "on-primary": "#ffffff", "primary-fixed": "#a3f69c", "on-tertiary-fixed-variant": "#005312", "error-container": "#ffdad6", "on-surface-variant": "#40493d", "on-background": "#1a1c19", "on-tertiary-fixed": "#002204", "on-secondary": "#ffffff", "secondary-fixed-dim": "#ffb786", "on-error": "#ffffff", "surface-container-highest": "#e3e3de", "outline": "#707a6c", "surface-container-low": "#f4f4ee", "on-secondary-container": "#5e2c00", "surface-tint": "#1b6d24", "surface-bright": "#fafaf4", "surface-container-high": "#e8e8e3", "tertiary": "#006418", "on-secondary-fixed": "#311300", "tertiary-fixed-dim": "#82db7e", "on-error-container": "#93000a", "tertiary-container": "#267e2e", "surface-container-lowest": "#ffffff", "surface-variant": "#e3e3de", "primary": "#0d631b", "surface-dim": "#dadad5", "surface-container": "#eeeee9", "secondary": "#964900", "surface": "#fafaf4", "on-secondary-fixed-variant": "#723600" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "space-xl": "2rem", "gutter": "1rem", "margin": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xs": "0.25rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem" }, fontFamily: { "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, fontSize: { "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "800" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col antialiased selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0 flex-1"><button aria-label="Kembali" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate pr-space-sm">Rencana Masak Mingguan</h1></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="Opsi Lainnya" class="w-11 h-11 rounded-full flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">more_vert</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full relative">
+<!-- Top Utility Bar (Search & Action triggers) -->
+<div class="px-margin pt-space-xs pb-space-sm flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px] text-primary">folder_special</span>
+<span>MenuKu Vault</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button aria-label="Cari Resep" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors shadow-sm active:scale-95" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button aria-label="Tambah Koleksi" class="w-10 h-10 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center hover:opacity-90 transition-transform active:scale-95 shadow-sm" id="btn-quick-add" type="button">
+<span class="material-symbols-outlined text-[20px]">playlist_add</span>
+</button>
+</div>
+</div>
+<!-- Hero Summary Card -->
+<div class="px-margin mb-space-md">
+<div class="relative overflow-hidden bg-surface-container-lowest p-space-md rounded-2xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-primary mb-1">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Tersinkronisasi Otomatis
+          </div>
+<p class="font-headline-sm text-headline-sm text-on-surface">5 Koleksi Aktif</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">28 Resep tersimpan siap masak</p>
+</div>
+<button class="h-10 px-4 rounded-full bg-secondary text-on-secondary flex items-center gap-1.5 font-label-md text-label-md shadow-md active:scale-95 transition-transform hover:opacity-95" id="btn-new-collection-banner" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Koleksi Baru</span>
+</button>
+</div>
+<!-- Quick stat pill strip -->
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-secondary">local_fire_department</span>
+<span>1,040 kkal rerata diet</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm bg-surface-container-low px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[14px] text-primary">timer</span>
+<span>Maks 30 mnt</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Swipeable Horizontal Tab Bar (Pager Header) -->
+<div class="sticky top-16 z-30 bg-surface/95 backdrop-blur-md pb-2">
+<div class="flex overflow-x-auto no-scrollbar gap-space-xs px-margin items-center">
+<button class="tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-tab="diet" type="button">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+<span>Menu Diet Sehat (6)</span>
+</button>
+<button class="tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all" data-tab="kilat" type="button">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+<span>Masakan Kilat &lt;20 Menit (8)</span>
+</button>
+<button class="tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all" data-tab="kids" type="button">
+<span class="material-symbols-outlined text-[16px]">child_care</span>
+<span>Favorit Si Kecil (5)</span>
+</button>
+<button class="tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all" data-tab="weekend" type="button">
+<span class="material-symbols-outlined text-[16px]">celebration</span>
+<span>Spesial Akhir Pekan (9)</span>
+</button>
+<button class="tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all" data-tab="soup" type="button">
+<span class="material-symbols-outlined text-[16px]">soup_kitchen</span>
+<span>Sayur &amp; Sup Hangat (7)</span>
+</button>
+</div>
+</div>
+<!-- Active Tab Collection Details Box -->
+<div class="px-margin my-space-sm">
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">Fokus Nutrisi</span>
+<button class="font-label-md text-label-md text-primary flex items-center gap-0.5 hover:underline" type="button">
+<span>Lihat Detail Koleksi</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Kumpulan hidangan rendah kalori, kaya protein, dan minim minyak untuk pola hidup seimbang.
+      </p>
+</div>
+</div>
+<!-- Sub-collection Fast Filter Chips -->
+<div class="px-margin mb-space-md">
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar">
+<button class="filter-chip shrink-0 h-9 px-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span>Semua</span>
+</button>
+<button class="filter-chip shrink-0 h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Tinggi Protein
+      </button>
+<button class="filter-chip shrink-0 h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Rendah Karbo
+      </button>
+<button class="filter-chip shrink-0 h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors" type="button">
+        Bebas Gluten
+      </button>
+</div>
+</div>
+<!-- Recipe List Section -->
+<div class="px-margin flex flex-col gap-space-md pb-space-xl">
+<!-- Card 1: Dada Ayam Panggang Herbal -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex flex-col transition-all hover:shadow-md">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Dada ayam panggang herbal keemasan bertekstur juicy dengan garnish rosemary segar, potongan lemon kuning cerah, dan taburan lada hitam di atas piring keramik putih bernuansa hangat estetik, pencahayaan alami dapur." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxBM-6WkKNdXC9Z6JCXr3iC3UaQxuLt1m9y1QshqlQWynz4FbKfEgsouE2JSlfZmFzekBbmgLB14Nwdff3qGuVtKbJfNsccFTT71LZkXpbp1mtvwEVR_rw58N3xHexa3LSiuLQfMCvx_bgCvB-7xUUXxSa64YbtTz3KRp7cyEnx23O3kign08z7bR01um3_hcrx-humQM9NCvC2ASWA0DTLw-t9NIOMUBDhLJBVC_3"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5 items-center">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+            Koleksi: Menu Diet
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            Tinggi Protein
+          </span>
+</div>
+<button aria-label="Favoritkan" class="bookmark-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-secondary hover:scale-110 active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.9</span>
+<span class="text-on-primary/80 font-normal">(124 ulasan)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dada Ayam Panggang Herbal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Marinasi rempah Mediterania dengan minyak zaitun murni.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+              350 kkal
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              25 mnt
+            </span>
+</div>
+<button class="schedule-btn h-9 px-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform hover:opacity-90" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Jadwalkan</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 2: Tumis Buncis Daging Cincang -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex flex-col transition-all hover:shadow-md">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Tumisan buncis hijau muda renyah dengan cacahan daging sapi tanpa lemak, irisan cabai merah tipis, dan bawang putih harum berkilau di atas wajan saji modern, suasana meja makan keluarga hangat." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxl5S7u2gFLJNchJLKyWS9aKGysC5wQEfmnmQVemixcIWuBIh956sVF4D2zixaqxO4M6zKMmSpkMBg_5Ka0GXWDuXH2CjhE2CBYfOYt2mHjRQfbRlbUkhgl4-a5pYXTpREGXeWOPiu8y7ipdlfLAdaCUscDczAtmLpp6_PyUMTAb2IH5p4c0GioS3EIq885v1ohZdyvKNp1Nv60GGCuWpgb4mtG4D_RBpb8p0XD3Y5"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5 items-center">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+            Koleksi: Menu Diet
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            Tinggi Serat
+          </span>
+</div>
+<button aria-label="Favoritkan" class="bookmark-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-secondary hover:scale-110 active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.8</span>
+<span class="text-on-primary/80 font-normal">(89 ulasan)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tumis Buncis Daging Cincang</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Tekstur renyah buncis baby segar dipadu saus tiram rendah natrium.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+              220 kkal
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              20 mnt
+            </span>
+</div>
+<button class="schedule-btn h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Jadwalkan</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 3: Sup Ikan Salmon Kuah Bening -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex flex-col transition-all hover:shadow-md">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Mangkuk keramik putih berisi sup ikan salmon kuah bening segar dengan potongan wortel, tomat ceri, daun kemangi harum, dan irisan jahe, mengepul hangat dengan pencahayaan lembut menenangkan." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhO_ORAf5tkUcJ7sUIlCmX6GamiBv5Q2U7GeWbTVjKnprpGPnQhsbrpzZ_SMW_5yhLXdJ0vCsufv_YyIUCd39xFcWQCDuCcPMNuYdgEZRaS0noHgyoZEjZGL3sG2OoyZwADs-sgrcZ3_Cyf4wzxOgwQ3aZYuXTDef6wXXwViRdoz5JXjx-11dRYVSJ18kYqzGNy7UFzg-bLoPpNuXGwTLO6GY8pQlOzHtsLfyv8jF9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5 items-center">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+            Koleksi: Menu Diet
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            Omega 3 &amp; Rendah Lemak
+          </span>
+</div>
+<button aria-label="Favoritkan" class="bookmark-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-secondary hover:scale-110 active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">5.0</span>
+<span class="text-on-primary/80 font-normal">(210 ulasan)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sup Ikan Salmon Kuah Bening</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Kuah kaldu jahe aromatik segar tanpa bau amis, kaya nutrisi otak.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+              290 kkal
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              30 mnt
+            </span>
+</div>
+<button class="schedule-btn h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Jadwalkan</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Card 4: Salad Sayur Saus Wijen Sangrai -->
+<article class="bg-surface-container-lowest rounded-2xl overflow-hidden shadow-sm flex flex-col transition-all hover:shadow-md">
+<div class="relative w-full h-44 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Mangkuk salad sayur penuh warna berisi selada romaine hijau segar, kubis ungu renyah, edamame, jagung manis, dan siraman saus wijen sangrai gurih, komposisi cerah penuh energi alami." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDafUC2te4TnKbz899sbdHP8hk7Vh4B53Oqa6nTY3fb-7Un14X2h5Mz5Au22CuagpXnzcixeZtKeGboooZVu7M79fnMHGlCDUdccEs91G6evMOY0gbeEaKBL8syYFChjuCIL8gnbQ6UgleFFdRYbb_SuvrRvUdo6wFpoDdpHsBAEZ97nm00uRtD3wGVm9W9KvOknd2ndBvchW-pUTg3QzFIQuV9sdvicAlDStwhbVhh"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-3 left-3 flex gap-1.5 items-center">
+<span class="px-2.5 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-sm">
+            Koleksi: Menu Diet
+          </span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm">
+            Cepat Saji
+          </span>
+</div>
+<button aria-label="Favoritkan" class="bookmark-btn absolute top-3 right-3 w-9 h-9 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-secondary hover:scale-110 active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[20px] text-secondary" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<div class="absolute bottom-3 left-3 flex items-center gap-1.5 text-on-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-amber-300" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold">4.7</span>
+<span class="text-on-primary/80 font-normal">(63 ulasan)</span>
+</div>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Salad Sayur Saus Wijen Sangrai</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-1">Kombinasi sayuran renyah dingin dengan dressing roasted sesame harum.</p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+              180 kkal
+            </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+              15 mnt
+            </span>
+</div>
+<button class="schedule-btn h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 active:scale-95 transition-transform hover:bg-surface-container-high" type="button">
+<span class="material-symbols-outlined text-[16px]">calendar_today</span>
+<span>Jadwalkan</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<!-- Bottom Floating Action Button (FAB) -->
+<div class="fixed bottom-6 right-margin z-40">
+<button aria-label="Buat Koleksi Baru" class="h-14 px-5 rounded-2xl bg-secondary text-on-secondary shadow-xl flex items-center gap-2 font-label-lg text-label-lg active:scale-95 transition-transform hover:brightness-105" id="main-fab" type="button">
+<span class="material-symbols-outlined text-[24px]">add</span>
+<span>Koleksi Baru</span>
+</button>
+</div>
+<!-- Micro Interaction Toast / Notification Dialog -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full font-label-md text-label-md shadow-lg opacity-0 pointer-events-none transition-all flex items-center gap-2" id="toast-msg">
+<span class="material-symbols-outlined text-[18px] text-inverse-primary" id="toast-icon">check_circle</span>
+<span id="toast-text">Tersimpan ke rencana makan</span>
+</div>
+</div>
+<script>
+  // Tab Switching Micro-interactions
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => {
+        b.className = 'tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-all';
+      });
+      btn.className = 'tab-btn shrink-0 flex items-center gap-1.5 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all';
+      showToast('Beralih ke tab: ' + btn.querySelector('span:last-child').textContent.split('(')[0].trim(), 'folder_open');
+    });
+  });
+
+  // Filter Chips Micro-interactions
+  const chips = document.querySelectorAll('.filter-chip');
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => {
+        c.className = 'filter-chip shrink-0 h-9 px-4 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-high transition-colors';
+        const icon = c.querySelector('.material-symbols-outlined');
+        if (icon) icon.remove();
+      });
+      chip.className = 'filter-chip shrink-0 h-9 px-4 rounded-full bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center gap-1 shadow-sm';
+      const checkIcon = document.createElement('span');
+      checkIcon.className = 'material-symbols-outlined text-[16px]';
+      checkIcon.textContent = 'check';
+      chip.prepend(checkIcon);
+    });
+  });
+
+  // Bookmark Heart Toggling
+  const bookmarks = document.querySelectorAll('.bookmark-btn');
+  bookmarks.forEach(bm => {
+    bm.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const icon = bm.querySelector('.material-symbols-outlined');
+      const isFilled = icon.style.fontVariationSettings.includes("'FILL' 1");
+      if (isFilled) {
+        icon.style.fontVariationSettings = "'FILL' 0";
+        icon.classList.remove('text-secondary');
+        icon.classList.add('text-on-surface-variant');
+        showToast('Resep dihapus dari favorit', 'heart_broken');
+      } else {
+        icon.style.fontVariationSettings = "'FILL' 1";
+        icon.classList.add('text-secondary');
+        icon.classList.remove('text-on-surface-variant');
+        showToast('Resep ditambahkan ke favorit', 'favorite');
+      }
+    });
+  });
+
+  // Schedule Buttons
+  const schedBtns = document.querySelectorAll('.schedule-btn');
+  schedBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const cardTitle = btn.closest('article').querySelector('h2').textContent;
+      showToast(cardTitle + ' ditambahkan ke Jadwal Masak!', 'event_available');
+    });
+  });
+
+  // Floating Action Button
+  const fab = document.getElementById('main-fab');
+  const btnNewCol = document.getElementById('btn-new-collection-banner');
+  const btnQuickAdd = document.getElementById('btn-quick-add');
+  
+  [fab, btnNewCol, btnQuickAdd].forEach(el => {
+    if (el) {
+      el.addEventListener('click', () => {
+        showToast('Membuka formulir koleksi baru...', 'create_new_folder');
+      });
+    }
+  });
+
+  // Toast Helper
+  let toastTimer;
+  function showToast(text, icon = 'check_circle') {
+    const toast = document.getElementById('toast-msg');
+    const toastText = document.getElementById('toast-text');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast) return;
+
+    toastText.textContent = text;
+    toastIcon.textContent = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+</script></main></body></html>

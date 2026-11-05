@@ -1,0 +1,266 @@
+---
+name: MenuKu Design System
+colors:
+  surface: '#fafaf4'
+  surface-dim: '#dadad5'
+  surface-bright: '#fafaf4'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f4f4ee'
+  surface-container: '#eeeee9'
+  surface-container-high: '#e8e8e3'
+  surface-container-highest: '#e3e3de'
+  on-surface: '#1a1c19'
+  on-surface-variant: '#40493d'
+  inverse-surface: '#2f312e'
+  inverse-on-surface: '#f1f1ec'
+  outline: '#707a6c'
+  outline-variant: '#bfcaba'
+  surface-tint: '#1b6d24'
+  primary: '#0d631b'
+  on-primary: '#ffffff'
+  primary-container: '#2e7d32'
+  on-primary-container: '#cbffc2'
+  inverse-primary: '#88d982'
+  secondary: '#964900'
+  on-secondary: '#ffffff'
+  secondary-container: '#fc820c'
+  on-secondary-container: '#5e2c00'
+  tertiary: '#006418'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#267e2e'
+  on-tertiary-container: '#ccffc3'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#a3f69c'
+  primary-fixed-dim: '#88d982'
+  on-primary-fixed: '#002204'
+  on-primary-fixed-variant: '#005312'
+  secondary-fixed: '#ffdcc6'
+  secondary-fixed-dim: '#ffb786'
+  on-secondary-fixed: '#311300'
+  on-secondary-fixed-variant: '#723600'
+  tertiary-fixed: '#9df898'
+  tertiary-fixed-dim: '#82db7e'
+  on-tertiary-fixed: '#002204'
+  on-tertiary-fixed-variant: '#005312'
+  background: '#fafaf4'
+  on-background: '#1a1c19'
+  surface-variant: '#e3e3de'
+typography:
+  display-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 44px
+    fontWeight: '800'
+    lineHeight: 52px
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 32px
+    fontWeight: '700'
+    lineHeight: 40px
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 26px
+    fontWeight: '700'
+    lineHeight: 34px
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+  headline-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '600'
+    lineHeight: 20px
+  label-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '600'
+    lineHeight: 16px
+  label-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 10px
+    fontWeight: '600'
+    lineHeight: 14px
+rounded:
+  sm: 0.5rem
+  DEFAULT: 1rem
+  md: 1.5rem
+  lg: 2rem
+  xl: 3rem
+  full: 9999px
+spacing:
+  gutter: 1rem
+  gutter-sm: 0.75rem
+  margin: 1rem
+  margin-tablet: 1.5rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+---
+
+## Brand & Style
+
+Sistem desain ini dirancang untuk aplikasi perencanaan memasak, penjelajahan resep, dan manajemen inventaris dapur rumah tangga. Filosofi desain berakar pada pendekatan **Modern Organic Material**—mengadaptasi prinsip Material Design 3 (MD3) dengan kepribadian visual yang hangat, bersahabat, teratur, dan menggugah selera.
+
+### Identitas & Sasaran Emosional
+- **Segar & Alami:** Merefleksikan bahan makanan sehat, sayuran segar, dan higienitas dapur.
+- **Hangat & Penuh Semangat:** Menghadirkan keceriaan memasak bersama keluarga melalui aksen sitrus/oranye yang memicu nafsu makan.
+- **Tenang & Bebas Stres:** Mengurangi kebingungan saat menentukan menu harian melalui tata letak lapang, hierarki visual yang jelas, serta komponen sentuh yang intuitif.
+
+### Gaya Visual
+Kombinasi permukaan tonal berlapis, sudut melengkung ramah (*organic roundness*), kontras visual berbobot seimbang, dan penekanan fungsionalitas khas antarmuka seluler modern.
+
+## Colors
+
+Palet warna dibangun di atas sistem peran warna Material Design 3 untuk memastikan aksesibilitas WCAG AAA/AA pada seluruh hierarki antarmuka:
+
+- **Primary (`#2E7D32`):** Warna utama untuk elemen penuntun tindakan (CTA primer, status aktif, bilah navigasi utama). Memberikan kesan kesegaran dan keasrian bahan pangan.
+- **On-Primary (`#FFFFFF`):** Kontras teks dan ikon di atas permukaan warna primer.
+- **Primary Container (`#C8E6C9`):** Latar belakang berbobot rendah untuk sorotan kategori resep, tombol sekunder, dan badge penanda.
+- **On-Primary Container (`#1B5E20`):** Teks dan ikon dengan tingkat kontras tinggi di atas `Primary Container`.
+- **Secondary / Accent (`#F57C00`):** Warna aksen oranye hangat untuk menonjolkan penawaran spesial, penanda waktu masak cepat, status bahan kadaluwarsa, dan FAB sekunder.
+- **On-Secondary (`#FFFFFF`):** Teks dan glif di atas permukaan aksen oranye.
+- **Secondary Container (`#FFE0B2`):** Wadah tonal aksen untuk chip filter interaktif dan kartu pengingat.
+- **Surface & Background (`#F9FAF8` / `#FFFFFF`):** Latar kanvas netral hangat yang bersih, nyaman di mata saat digunakan di bawah pencahayaan dapur.
+- **Surface Variant / Tonal (`#F1F4EE`):** Wadah kartu resep, kolom input tidak aktif, dan pembatas konten lembut.
+- **Outline / Border (`#E0E4DC`):** Garis tepi berdaya kontras rendah untuk memisahkan bidang tanpa menambah beban kognitif.
+- **Text Primary (`#1A1C19`):** Teks utama dengan tingkat keterbacaan tajam.
+- **Text Secondary (`#43483E`):** Keterangan porsi, durasi memasak, dan subjudul bahan.
+
+## Typography
+
+Tipografi menggunakan rupa huruf **Plus Jakarta Sans** secara konsisten dari *Display* hingga *Label*. Pilihan ini memberikan artikulasi modern, proporsi ramah, geometri x-height tinggi, dan ketajaman optik yang nyaman dibaca pada layar perangkat bergerak di lingkungan dapur yang dinamis.
+
+- **Display & Headline:** Diterapkan untuk judul resep utama, ucapan selamat datang personal, dan ringkasan mingguan. Memiliki bobot tebal (`700`/`800`) untuk penegasan hierarki cepat.
+- **Body:** Mengutamakan keterbacaan instruksi langkah memasak dan takaran bumbu. Jarak baris proporsional menjaga alur pandang agar pengguna tidak kehilangan langkah kerja.
+- **Label:** Digunakan pada teks tombol pill, nama takaran chip, penanda waktu, dan navigasi bawah (*bottom bar*). Selalu menggunakan bobot semi-bold (`600`) demi kejelasan interaksi sentuh.
+
+## Layout & Spacing
+
+Sistem tata letak mengadopsi pola **fluid grid** berbasis modular 4px/8px yang disesuaikan untuk orientasi genggaman satu tangan ponsel pintar:
+
+- **Mobile Canvas (Default):** Tata letak kolom tunggal fleksibel atau kisi 2-kolom untuk katalog kartu resep, dengan `margin` 16px (`1rem`) dan `gutter` 16px (`1rem`).
+- **Tablet / Large Mobile:** Melebar ke kisi 0�$����H[�Z�X[�Z�[Y[��Z�\\�]]H�[[�\�Y[�HZ[���X[�[��[�[�[���][�X\��[��H�
+K�\�[X
+K��H
+���]YH�\�H[�\��[
+�X�KJ�
+N����H�X�K^�
+
+N��\�Z�[�\�HZ�ۈZZܛ�[�Z����[�\�ܜ�K��H�X�K\�X
+
+N��X[��[�\�Y[[Y[�[[H�\�Y�K[�Y�\��Z[�Y[�Z��H�X�K[Y
+M�
+N�Y[��[�\��[�[�\�[�Z��\�H�\�\�ܛHX\�Z�[�[�][HY�\��\�\��H�X�K[�
+�
+N��\�Z��\�Z�[[�\�X�Y�X[��۝[�
+Z\�[�[�\�H��Z[�][XH�[��[���ZY[X\�ZȊK��H�X�K^
+̜
+N��\�Z�Z�\��Z��H[[X[��X�[[H�\��]�Y�\�H�]�Z�����[]�][ۈ	�\��Y\�\��H�Y[[X[�Y[��][XZ�[��\�[H
+��ۘ[[]�][ۈQʊ�X[��\YZ�[�[��[�
+��[X�Y[��Y��ʊ��\�ۘH[��][X�]Y[Z[�[X[�[��^X[��[�][H�Z�H[ZH�\�[��[XZ[��\��Z���K�
+��]�[
+�\��X�H�]
+N����\��H]\��[Z�[��][XHюQ�Q�[�H�^X[��[�[�[�H�\�\��]\�X\�����
+��]�[H
+ۘ[�\��	��X\���۝Z[�\��N����\��HьQ�QX]]Hё�����[��[��^X[��[�[X�Y[��[��][\�
+��ؘJ����K�
+X
+H�\�H\H�\�\��۝�\��[�Z�LM��]X�[\��ˈ
+��]�[�
+X�]�K�ݙ\��\��	����H�Y]�N����\�H�\�\�X]\�[�Z]]H�Y]�[�[]܈ܜ�H�ZZ�[��[��^X[��[�Y�\�
+�N�ؘJ�L�KL�
+X
+KY[X�\�Z�[��\�[�Y[��\[��ܙ�[�Z˂��
+��]�[�
+��][��X�[ۈ�]ۈ	�X[���N���]\�̑M�̘]]Hё�����X[��[�ZZ��[�[��[��^X[��[�[X�Y[�Z�]\��۝��
+��ؘJ����K�M
+X
+KY[X[�H\�]X[��HZ��H[��]][��\�\�\�H]]H[�[X�Z[����\\�������\\��Z\�H�[�Z�Y[��Z���\�Z�[��\�Z�\�
+��[\�\Y	�Y�X�\��]\�H
+��[�Y�\��]�[�J��X[��[X[�\�[�[X[�\�[�Z���H
+���[[
+��[�YY�[
+N���Y�[�Z�[��X�\�H�ۜ�\�[�[�Z��X��Z��H][XH
+�JK�[Z[��\�X[��\�\
+
+��X\���\��K[��\[�X\�[��
+
+��[\��\ʊK��H
+��^�H\��H�\��]\�H
+��[�YL��M�8�$̍
+N���]\�\�[�YH�۝Z[�\��\�H�\�\[X�\�[�[
+
+����H�Y]
+�K[��P�Q�
+�Y]Y[X�[]�]Z\��H[X�]
+K��H
+��\��H�\��]\�H
+��[�Y^�L�
+N���]\�\�[�YH�[X�\��][��]H�\�\Z[�X]\��YZ[�]�Z[�[���Z��[�[��][H�[[��X[��������\ۙ[�����K��X��
+�]ۜ�B�H
+���[Y�]ۈ
+][XJN����[�Z��\�[]Z
+��[�YY�[
+K]\�̑M�̘Z��ё�����[���H[�Z��[]YZ[�[�Z�[�[��\�H�\�Z���܈H\\���H
+��ۘ[�]ێ����[�Z��\�[]Z]\���M��XZ���P�QL��Y�[�Z�[�[�Z�Z��H�Z�[�\��\\�H��[\[��H�Y��]]H��\�XZZ�[�ܜ�H���H
+��X��[��]ێ����[�Z��\�[]Z]\�эM��Z��ё������Z�\�\��[�[�Z��X���][ZHY[X\�Z��Z�\�[�Ȉ]]H��Y�\�H�Z
+�Y[]�\��JH�����������][��X�[ۈ�]ۈ
+�P�B�HY[���[�Z�[��[�Y]�HQ���[�YL�
+��ܛ�\��Y]\�H�\�Z�\�[�M�M�]]H
+�^[�Y�P���\��[�Z�[Y[X�\���H�\��H\�]Z�X[�Z\�H[��[�̑M�̘[��[�Z�ۈ�\��Hё�����]]HZ��[�эM��[�Z��X��Z��H[��]\��Z�HY[X\�Z�Y[��[X�[�˂�����ˈ�[Z[��\�X[�
+�X\���\�B�H\�]Z�X[�[�Z[\��\�[
+��[�YY�[
+K]\�ьQ�QX�][�H\�LM���H[[���\HZ�ۈ�X�H[X�\�\�H�\�H�\�H[��X���[\�H�\�H�[�[���X]���\�]\��\�X�ZY[��YHё�����[��[��[�����\��\��\��H̑M�̘��������\�[�X\�[��
+�[\��\�B�H�[�Z��\�[
+��[�YY�[
+K[���H͜Z��X�[[Y��H
+���]\�YZ�Z�Y����]\�ьQ�QXZ�����X[�H�\�\�\K��H
+���]\�Z�Y����]\���M��XZ���P�QL�[[���\HZ�ۈ�[�[��H�Y�X[�\[�������K��\�H�\�\	�[��[�\�\�
+�\��B�H
+��ۘ[�\����]\�ьQ�QX�Y]��[�YL�[�H�^X[��[�[Z\�Z�\�X[Z[�[X[\˂�H
+��[]�]Y�\����]\�ё������Y]��[�YL��\��[���ZH[\��LM�[]�\�H]�[K�Y[�[\[��[X��Z[���XZ�[�[��\�[���Y[[���[���Y�H\�[X\�H�Z�H
+Z\�[���[��K�[XH�\�\[�[�Z�]܈�]\��YXX[��Z[�H\\���������Y�\�	���Z��[�[��
+�X��\�	�[�]�Z[�B�H
+���X��\��[[��N���][H�\�\�[��[�[���HZ[�[X[���Z��[�[���\�\H[���\�[�]]H��Z��\��Y]Y[[���[��[\�
+��[�Y[Y
+K[��[��]\�Z�Y��\��\��HZ�]H̑M�̘[�Z��X[����X]\�\��ܙ]�\�H�\��[�H�H�\��H���X��H
+��[�]�Y[Ί���Y[��X\�Z�[�Z���\��^XH�۝Z[�\�\�\�H
+
+��[Y^�Y[
+�H[��[��Y]]\�Y[[���[��]]H�^XH�\��[���ZH[�ZY[X�[]
+��[�Y^
+KX�[Y[��[X�[���\�ۜ�Y��\�H[�[��Z�\��܈�\��YH\�Z��H[��]������ˈ�Y�H	�[�Z�]܈�]\�\\��HX�[�]\��\��[�Z��\�[Z[�H
+��[�YY�[Y[���۝X�[\�X
+K��H
+��Z�]N����Z[�\��YXH
+��M��X�Z���P�QL�
+K��H
+��ܘ[�YN���[\\�X�\��Y[�Z�]H^\�Y
+ё�L���Z���M�LL
+K

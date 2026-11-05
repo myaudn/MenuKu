@@ -1,0 +1,146 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ==========================================
+    // HELPER FUNCTIONS (Zero-Trust Security)
+    // ==========================================
+
+    function isAuthenticated() {
+      return request.auth != null && request.auth.uid != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() > 0 && id.size() <= 128;
+    }
+
+    function isValidUserProfile(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.email is string && data.email.size() > 0 && data.email.size() <= 150 &&
+             (!('familyPortions' in data) || (data.familyPortions is int && data.familyPortions >= 1 && data.familyPortions <= 20)) &&
+             (!('weeklyBudget' in data) || (data.weeklyBudget is int && data.weeklyBudget >= 0)) &&
+             (!('dietaryPreferences' in data) || (data.dietaryPreferences is list && data.dietaryPreferences.size() <= 20)) &&
+             (!('syncShoppingToPantry' in data) || data.syncShoppingToPantry is bool) &&
+             (!('cookReminderAlarm' in data) || data.cookReminderAlarm is bool) &&
+             (!('earlyExpiryAlert' in data) || data.earlyExpiryAlert is bool);
+    }
+
+    function isValidStockItem(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.location is string && (data.location in ['KULKAS', 'FREEZER', 'PANTRI']) &&
+             (data.quantity is int || data.quantity is float) && data.quantity >= 0 &&
+             data.unit is string && data.unit.size() > 0 && data.unit.size() <= 30 &&
+             (!('category' in data) || (data.category is string && data.category.size() <= 50)) &&
+             (!('expiryDate' in data) || (data.expiryDate is string && data.expiryDate.size() <= 50)) &&
+             (!('daysRemaining' in data) || data.daysRemaining is int) &&
+             (!('status' in data) || (data.status in ['AMAN', 'SEGERA_OLAH', 'KRITIS', 'KADALUWARSA']));
+    }
+
+    function isValidMealSchedule(data) {
+      return data.dateFormatted is string && data.dateFormatted.size() > 0 && data.dateFormatted.size() <= 50 &&
+             data.mealType is string && (data.mealType in ['SARAPAN', 'MAKAN_SIANG', 'CAMILAN', 'MAKAN_MALAM']) &&
+             data.recipeTitle is string && data.recipeTitle.size() > 0 && data.recipeTitle.size() <= 150 &&
+             (!('recipeId' in data) || (data.recipeId is string && data.recipeId.size() <= 100)) &&
+             (!('isDone' in data) || data.isDone is bool) &&
+             (!('reminderEnabled' in data) || data.reminderEnabled is bool) &&
+             (!('reminderTime' in data) || (data.reminderTime is string && data.reminderTime.size() <= 30));
+    }
+
+    function isValidShoppingItem(data) {
+      return data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             (data.quantity is int || data.quantity is float) && data.quantity >= 0 &&
+             data.unit is string && data.unit.size() > 0 && data.unit.size() <= 30 &&
+             data.isPurchased is bool &&
+             (!('category' in data) || (data.category is string && data.category.size() <= 50)) &&
+             (!('urgency' in data) || (data.urgency in ['URGENT', 'NORMAL', 'LOW'])) &&
+             (!('estimatedPrice' in data) || (data.estimatedPrice is int && data.estimatedPrice >= 0)) &&
+             (!('linkedRecipeTitle' in data) || (data.linkedRecipeTitle is string && data.linkedRecipeTitle.size() <= 150)) &&
+             (!('notes' in data) || (data.notes is string && data.notes.size() <= 300));
+    }
+
+    function isValidTasteStory(data) {
+      return data.title is string && data.title.size() > 0 && data.title.size() <= 150 &&
+             data.recipeTitle is string && data.recipeTitle.size() > 0 && data.recipeTitle.size() <= 150 &&
+             (data.rating is int || data.rating is float) && data.rating >= 0 && data.rating <= 5 &&
+             (!('photoUrl' in data) || (data.photoUrl is string && data.photoUrl.size() <= 2000)) &&
+             (!('notes' in data) || (data.notes is string && data.notes.size() <= 2000)) &&
+             (!('tags' in data) || (data.tags is list && data.tags.size() <= 10));
+    }
+
+    // ==========================================
+    // GLOBAL RECIPES COLLECTION
+    // Master catalogue: read-only for authenticated users
+    // ==========================================
+    match /recipes/{recipeId} {
+      allow get, list: if isAuthenticated();
+      allow write: if false; // Managed via Firebase Console or Admin SDK
+    }
+
+    // ==========================================
+    // USER-ISOLATED DATA (Subcollections & Profile)
+    // Multi-tenant privacy: users access only their own data
+    // ==========================================
+    match /users/{userId} {
+      // User Profile document
+      allow get, list: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUserProfile(request.resource.data);
+      allow update: if isOwner(userId) && isValidUserProfile(request.resource.data);
+      allow delete: if isOwner(userId);
+
+      // Pantry / Refrigerator Inventory subcollection
+      match /inventory/{stockId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(stockId) && isValidStockItem(request.resource.data);
+        allow update: if isOwner(userId) && isValidId(stockId) && isValidStockItem(request.resource.data);
+        allow delete: if isOwner(userId) && isValidId(stockId);
+      }
+
+      // Meal Schedules subcollection
+      match /schedules/{scheduleId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(scheduleId) && isValidMealSchedule(request.resource.data);
+        allow update: if isOwner(userId) && isValidId(scheduleId) && isValidMealSchedule(request.resource.data);
+        allow delete: if isOwner(userId) && isValidId(scheduleId);
+      }
+
+      // Grocery Shopping Items subcollection
+      match /shopping_items/{itemId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(itemId) && isValidShoppingItem(request.resource.data);
+        allow update: if isOwner(userId) && isValidId(itemId) && isValidShoppingItem(request.resource.data);
+        allow delete: if isOwner(userId) && isValidId(itemId);
+      }
+
+      // Taste Stories (Journal) subcollection
+      match /taste_stories/{storyId} {
+        allow get, list: if isOwner(userId);
+        allow create: if isOwner(userId) && isValidId(storyId) && isValidTasteStory(request.resource.data);
+        allow update: if isOwner(userId) && isValidId(storyId) && isValidTasteStory(request.resource.data);
+        allow delete: if isOwner(userId) && isValidId(storyId);
+      }
+
+      // Custom Recipe Collections subcollection
+      match /collections/{collectionId} {
+        allow get, list: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidId(collectionId);
+        allow delete: if isOwner(userId) && isValidId(collectionId);
+      }
+
+      // Notifications subcollection
+      match /notifications/{notificationId} {
+        allow get, list: if isOwner(userId);
+        allow create, update: if isOwner(userId) && isValidId(notificationId);
+        allow delete: if isOwner(userId) && isValidId(notificationId);
+      }
+    }
+
+    // Default deny for all other unmatched paths
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

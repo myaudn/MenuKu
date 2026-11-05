@@ -1,0 +1,136 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "User profile information, family portions, diet preferences, and budget",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "avatarUrl": { "type": "string" },
+        "familyPortions": { "type": "integer" },
+        "dietaryPreferences": { "type": "array" },
+        "weeklyBudget": { "type": "integer" },
+        "syncShoppingToPantry": { "type": "boolean" },
+        "cookReminderAlarm": { "type": "boolean" },
+        "earlyExpiryAlert": { "type": "boolean" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "name", "email"]
+    },
+    "Recipe": {
+      "title": "Recipe",
+      "description": "Master culinary recipe item in MenuKu catalog",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "subtitle": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "category": { "type": "string" },
+        "prepTimeMinutes": { "type": "integer" },
+        "portions": { "type": "integer" },
+        "calories": { "type": "integer" },
+        "rating": { "type": "number" },
+        "ingredients": { "type": "array" },
+        "steps": { "type": "array" }
+      },
+      "required": ["id", "title", "category"]
+    },
+    "StockItem": {
+      "title": "StockItem",
+      "description": "Pantry, fridge, or freezer food item with expiry countdown",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "category": { "type": "string" },
+        "location": { "type": "string", "enum": ["KULKAS", "FREEZER", "PANTRI"] },
+        "quantity": { "type": "number" },
+        "unit": { "type": "string" },
+        "purchaseDate": { "type": "string" },
+        "expiryDate": { "type": "string" },
+        "daysRemaining": { "type": "integer" },
+        "status": { "type": "string", "enum": ["AMAN", "SEGERA_OLAH", "KRITIS", "KADALUWARSA"] }
+      },
+      "required": ["id", "name", "location", "quantity", "unit"]
+    },
+    "MealSchedule": {
+      "title": "MealSchedule",
+      "description": "Scheduled meal plan entry on the weekly calendar",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "dateFormatted": { "type": "string" },
+        "mealType": { "type": "string", "enum": ["SARAPAN", "MAKAN_SIANG", "CAMILAN", "MAKAN_MALAM"] },
+        "recipeId": { "type": "string" },
+        "recipeTitle": { "type": "string" },
+        "recipeImageUrl": { "type": "string" },
+        "prepTimeMinutes": { "type": "integer" },
+        "isDone": { "type": "boolean" },
+        "reminderEnabled": { "type": "boolean" },
+        "reminderTime": { "type": "string" }
+      },
+      "required": ["id", "dateFormatted", "mealType", "recipeTitle"]
+    },
+    "ShoppingItem": {
+      "title": "ShoppingItem",
+      "description": "Grocery shopping list item integrated with recipes and pantry",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "quantity": { "type": "number" },
+        "unit": { "type": "string" },
+        "category": { "type": "string" },
+        "urgency": { "type": "string", "enum": ["URGENT", "NORMAL", "LOW"] },
+        "estimatedPrice": { "type": "integer" },
+        "isPurchased": { "type": "boolean" }
+      },
+      "required": ["id", "name", "quantity", "unit", "isPurchased"]
+    },
+    "TasteStory": {
+      "title": "TasteStory",
+      "description": "User cooking journal entry with photos, ratings, and notes",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "recipeTitle": { "type": "string" },
+        "dateFormatted": { "type": "string" },
+        "rating": { "type": "number" },
+        "photoUrl": { "type": "string" },
+        "notes": { "type": "string" },
+        "tags": { "type": "array" }
+      },
+      "required": ["id", "title", "recipeTitle", "rating"]
+    }
+  },
+  "firestore": {
+    "/recipes/{recipeId}": {
+      "schema": { "$ref": "#/entities/Recipe" },
+      "description": "Global master recipe catalog available to all authenticated users"
+    },
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User profile, dietary preferences, and settings"
+    },
+    "/users/{userId}/inventory/{stockId}": {
+      "schema": { "$ref": "#/entities/StockItem" },
+      "description": "User pantry and refrigerator stock inventory"
+    },
+    "/users/{userId}/schedules/{scheduleId}": {
+      "schema": { "$ref": "#/entities/MealSchedule" },
+      "description": "User weekly meal schedule plan"
+    },
+    "/users/{userId}/shopping_items/{itemId}": {
+      "schema": { "$ref": "#/entities/ShoppingItem" },
+      "description": "User grocery shopping list items"
+    },
+    "/users/{userId}/taste_stories/{storyId}": {
+      "schema": { "$ref": "#/entities/TasteStory" },
+      "description": "User culinary taste stories and cooking journal"
+    }
+  }
+}

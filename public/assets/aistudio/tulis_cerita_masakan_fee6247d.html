@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error": "#ba1a1a", "inverse-surface": "#2f312e", "on-primary-fixed-variant": "#005312", "background": "#fafaf4", "secondary-container": "#fc820c", "on-secondary-container": "#5e2c00", "surface-container": "#eeeee9", "inverse-on-surface": "#f1f1ec", "on-primary-container": "#cbffc2", "surface-bright": "#fafaf4", "on-tertiary-fixed-variant": "#005312", "surface-container-lowest": "#ffffff", "tertiary": "#006418", "on-error-container": "#93000a", "secondary-fixed": "#ffdcc6", "tertiary-fixed": "#9df898", "surface-dim": "#dadad5", "secondary": "#964900", "on-secondary": "#ffffff", "primary-fixed-dim": "#88d982", "on-tertiary": "#ffffff", "outline-variant": "#bfcaba", "on-secondary-fixed": "#311300", "secondary-fixed-dim": "#ffb786", "tertiary-fixed-dim": "#82db7e", "surface-container-highest": "#e3e3de", "outline": "#707a6c", "surface-container-low": "#f4f4ee", "on-primary-fixed": "#002204", "on-surface": "#1a1c19", "on-background": "#1a1c19", "primary": "#0d631b", "error-container": "#ffdad6", "primary-container": "#2e7d32", "on-secondary-fixed-variant": "#723600", "tertiary-container": "#267e2e", "primary-fixed": "#a3f69c", "inverse-primary": "#88d982", "surface-variant": "#e3e3de", "on-error": "#ffffff", "on-surface-variant": "#40493d", "on-primary": "#ffffff", "surface": "#fafaf4", "surface-tint": "#1b6d24", "surface-container-high": "#e8e8e3", "on-tertiary-container": "#ccffc3", "on-tertiary-fixed": "#002204" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter-sm": "0.75rem", "margin": "1rem", "margin-tablet": "1.5rem" }, fontFamily: { "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-md": ["22px", { lineHeight: "28px", fontWeight: "600" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-lg-mobile": ["26px", { lineHeight: "34px", fontWeight: "700" }], "display-lg": ["44px", { lineHeight: "52px", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "14px", fontWeight: "600" }], "label-lg": ["14px", { lineHeight: "20px", fontWeight: "600" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["12px", { lineHeight: "16px", fontWeight: "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Kembali ke Beranda" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Tulis Cerita Masakan</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Cari Galeri" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Filter dan Opsi" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">tune</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 bg-surface pb-safe min-h-screen"><div class="flex flex-col w-full">
+<div class="px-gutter pt-space-md pb-space-xl flex flex-col gap-space-lg">
+<!-- Header Petunjuk Singkat -->
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-space-xs self-start px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_fire_department</span>
+        Dapur Berbintang Hari Ini
+      </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Dokumentasikan Kreasi Dapur Anda</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Simpan memori rasa, bumbu rahasia, serta foto hidangan istimewa buatan tangan sendiri.</p>
+</div>
+<!-- Area Preview Gambar & Dropzone -->
+<div class="flex flex-col gap-space-xs">
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container shadow-md group">
+<div class="relative h-64 w-full">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A freshly cooked authentic Indonesian Soto Ayam Lamongan served in a warm ceramic bowl with vibrant yellow turmeric broth, shredded tender chicken, glass noodles, boiled egg halves, crisp celery, fried shallots, and savory koya powder topping, bright natural window lighting in a cozy home kitchen with warm wooden textures and fresh lime wedges." id="dish-photo-preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ2gN_rh20QTAw5CtXJUnIOwuI40kNf7mN1EU4ptctpvYySApefhH8WpyB3XkR92ByNGd56d1b62AmQiYN0CiSU8_bJIZHn69N2wQmiURblAhxcQmJz6zmm3vW2i8Ab98DF151w6jEcdwzjYy0ZUzwyIyBHJpQ3aV0Rs8u1ZYbnIqwm22a8cwsJNsLNjU0MpwzqIIzwiYwjKNLRw4PafL_q-a-QKKxCV3haxp5eGQd"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-inverse-surface/20 to-transparent"></div>
+<!-- Badges on Photo -->
+<div class="absolute top-space-md left-space-md flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">photo_camera</span>
+            Foto Terpilih (HD)
+          </div>
+<button aria-label="Hapus Foto" class="absolute top-space-md right-space-md w-9 h-9 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface-variant hover:text-error flex items-center justify-center transition-colors" id="btn-remove-photo" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+<!-- Floating Action over image -->
+<div class="absolute bottom-space-md inset-x-space-md flex items-center justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-inverse-on-surface/80 uppercase tracking-wider">Ukuran Gambar</span>
+<span class="font-label-lg text-label-lg text-inverse-on-surface font-semibold truncate">3.8 MB • Resolusi Asli</span>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<button class="px-3.5 py-2 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm active:scale-95 transition-transform" id="btn-change-photo" type="button">
+<span class="material-symbols-outlined text-[18px]">cached</span>
+                Ganti Foto
+              </button>
+</div>
+</div>
+</div>
+<!-- Quick Switch Options Tray -->
+<div class="p-space-sm bg-surface-container-high flex items-center justify-around">
+<button class="flex items-center gap-space-xs py-1.5 px-3 rounded-full text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary">add_a_photo</span>
+            Kamera Langsung
+          </button>
+<div class="h-4 w-px bg-outline-variant/50"></div>
+<button class="flex items-center gap-space-xs py-1.5 px-3 rounded-full text-on-surface-variant hover:bg-surface-container font-label-md text-label-md transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">photo_library</span>
+            Buka Galeri HP
+          </button>
+</div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant px-space-xs">Tip: Gunakan pencahayaan alami agar warna kuah dan tekstur sayur terlihat lezat.</span>
+</div>
+<!-- Input Nama Masakan (MD3 Style Container) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="nama-masakan">
+<span>Nama Masakan <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="char-counter">27/50</span>
+</label>
+<div class="relative flex items-center rounded-2xl bg-surface-container-lowest shadow-sm px-space-md py-3 focus-within:shadow-md focus-within:bg-surface-container-lowest transition-all">
+<span class="material-symbols-outlined text-primary text-[22px] mr-space-sm shrink-0">restaurant</span>
+<input class="w-full bg-transparent font-headline-sm text-headline-sm text-on-surface focus:outline-none placeholder:text-outline-variant" id="nama-masakan" maxlength="50" placeholder="cth. Rendang Daging Empuk" type="text" value="Soto Ayam Lamongan Istimewa"/>
+</div>
+</div>
+<!-- Kaitkan ke Resep MenuKu (Opsional) -->
+<div class="flex flex-col gap-space-sm p-space-md rounded-2xl bg-surface-container-low">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">menu_book</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Tautkan ke Buku Resep</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Opsional</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hubungkan masakan ini ke takaran bahan di MenuKu untuk kalkulasi nutrisi otomatis.</p>
+<!-- Interactive Chips Selector -->
+<div class="flex flex-wrap gap-space-xs pt-1" id="recipe-chips-group">
+<button class="recipe-chip active flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-type="linked" type="button">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          Soto Ayam Lamongan Asli
+        </button>
+<button class="recipe-chip flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all" data-type="freestyle" type="button">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+          Kreasi Bebas / Tanpa Resep
+        </button>
+<button class="recipe-chip flex items-center gap-1.5 px-3 py-2 rounded-full bg-surface-container-highest text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all" data-type="other" type="button">
+<span class="material-symbols-outlined text-[16px]">search</span>
+          Cari Resep Lain...
+        </button>
+</div>
+</div>
+<!-- Tanggal & Jam Memasak (2 Kolom Grid) -->
+<div class="grid grid-cols-2 gap-space-md">
+<!-- Date Picker Mock -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Tanggal Memasak</label>
+<button class="w-full flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">21 Nov 2024</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hari ini</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">calendar_today</span>
+</button>
+</div>
+<!-- Time Picker Mock -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface-variant">Jam Makan</label>
+<button class="w-full flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-sm text-left active:scale-[0.98] transition-transform" type="button">
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold truncate">12:30 WIB</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Makan Siang</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0">schedule</span>
+</button>
+</div>
+</div>
+<!-- Rating Kepuasan Masak -->
+<div class="flex flex-col items-center gap-space-sm p-space-md rounded-2xl bg-surface-container-lowest shadow-sm">
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Tingkat Kepuasan Hasil Masakan</span>
+<!-- Stars Row -->
+<div class="flex items-center gap-2" id="star-rating-container">
+<button class="star-btn p-1 text-secondary hover:scale-110 transition-transform" data-val="1" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn p-1 text-secondary hover:scale-110 transition-transform" data-val="2" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn p-1 text-secondary hover:scale-110 transition-transform" data-val="3" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn p-1 text-secondary hover:scale-110 transition-transform" data-val="4" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn p-1 text-secondary hover:scale-110 transition-transform" data-val="5" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary-fixed/60 text-on-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">sentiment_very_satisfied</span>
+<span id="rating-label">5.0 - Sempurna! Seluruh keluarga nambah</span>
+</div>
+</div>
+<!-- Input Catatan & Kesan Rasa (Textarea MD3) -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="catatan-rasa">
+<span>Catatan &amp; Kesan Rasa</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Bumbu Rahasia &amp; Tekstur</span>
+</label>
+<div class="rounded-2xl bg-surface-container-lowest shadow-sm p-space-md focus-within:shadow-md transition-shadow">
+<textarea class="w-full bg-transparent font-body-md text-body-md text-on-surface focus:outline-none placeholder:text-outline-variant resize-none" id="catatan-rasa" placeholder="Ceritakan rasa masakan Anda..." rows="3">Kuah gurih kaya rempah, koya udang renyah maksimal. Sukses besar!</textarea>
+<div class="flex items-center justify-between pt-space-xs mt-space-xs border-t-0">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-primary">psychology</span>
+            Disimpan privat ke jurnal masak
+          </div>
+<button class="px-2.5 py-1 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface hover:bg-surface-container-highest transition-colors" id="btn-quick-tag" type="button">
+            + Tambah Tag Rasa
+          </button>
+</div>
+</div>
+</div>
+<!-- Indikator Loading / Progress Bar Pengunggahan -->
+<div class="flex flex-col gap-space-xs p-space-md rounded-2xl bg-surface-container-low shadow-sm" id="upload-progress-card">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<div class="flex items-center gap-space-xs text-primary font-semibold">
+<span class="material-symbols-outlined text-[18px] animate-spin">sync</span>
+<span id="progress-status-text">Mengunggah foto resolusi tinggi...</span>
+</div>
+<span class="text-primary font-bold" id="progress-percentage-text">85%</span>
+</div>
+<!-- Progress Bar Track -->
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-300 ease-out" id="progress-bar-fill" style="width: 85%;"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant pt-0.5">
+<span>Kamera: 12 MP (Ultra Wide Lens)</span>
+<span>Sisa 2 detik</span>
+</div>
+</div>
+<!-- Tombol Aksi -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-12 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md hover:shadow-lg active:scale-[0.98] transition-all" id="btn-submit-story" type="button">
+<span class="material-symbols-outlined text-[20px]">check</span>
+        Simpan Cerita Rasa
+      </button>
+<button class="w-full h-11 rounded-full bg-transparent hover:bg-surface-container text-on-surface-variant font-label-md text-label-md flex items-center justify-center transition-colors" onclick="history.back()" type="button">
+        Batal &amp; Buang Perubahan
+      </button>
+</div>
+</div>
+</div>
+<script>
+  (function() {
+    // Character Counter for Dish Name
+    const titleInput = document.getElementById('nama-masakan');
+    const counterEl = document.getElementById('char-counter');
+    if (titleInput && counterEl) {
+      titleInput.addEventListener('input', (e) => {
+        const len = e.target.value.length;
+        counterEl.textContent = `${len}/50`;
+        if (len >= 45) {
+          counterEl.classList.add('text-secondary');
+        } else {
+          counterEl.classList.remove('text-secondary');
+        }
+      });
+    }
+
+    // Recipe Chip Selection
+    const chipBtns = document.querySelectorAll('#recipe-chips-group .recipe-chip');
+    chipBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        chipBtns.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
+          c.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface-container-highest', 'text-on-surface-variant');
+        btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+      });
+    });
+
+    // Star Rating Interaction
+    const starBtns = document.querySelectorAll('#star-rating-container .star-btn');
+    const ratingLabel = document.getElementById('rating-label');
+    const labelTexts = {
+      1: '1.0 - Kurang pas, perlu banyak latihan',
+      2: '2.0 - Cukup baik, bumbu agak kurang meresap',
+      3: '3.0 - Lumayan enak, porsi pas',
+      4: '4.0 - Mantap! Rasa mendekati resto idaman',
+      5: '5.0 - Sempurna! Seluruh keluarga nambah'
+    };
+
+    starBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.getAttribute('data-val') || '5', 10);
+        starBtns.forEach(s => {
+          const sVal = parseInt(s.getAttribute('data-val') || '0', 10);
+          const icon = s.querySelector('.material-symbols-outlined');
+          if (icon) {
+            if (sVal <= val) {
+              s.classList.remove('text-outline-variant');
+              s.classList.add('text-secondary');
+              icon.style.fontVariationSettings = "'FILL' 1";
+            } else {
+              s.classList.remove('text-secondary');
+              s.classList.add('text-outline-variant');
+              icon.style.fontVariationSettings = "'FILL' 0";
+            }
+          }
+        });
+        if (ratingLabel && labelTexts[val]) {
+          ratingLabel.textContent = labelTexts[val];
+        }
+      });
+    });
+
+    // Simulated Progress Bar completion toggle
+    const submitBtn = document.getElementById('btn-submit-story');
+    const progressFill = document.getElementById('progress-bar-fill');
+    const progressPercent = document.getElementById('progress-percentage-text');
+    const progressStatus = document.getElementById('progress-status-text');
+
+    if (submitBtn && progressFill && progressPercent && progressStatus) {
+      let isCompleted = false;
+      submitBtn.addEventListener('click', () => {
+        if (!isCompleted) {
+          progressFill.style.width = '100%';
+          progressPercent.textContent = '100%';
+          progressStatus.textContent = 'Foto siap dan tersimpan aman!';
+          submitBtn.innerHTML = '<span class="material-symbols-outlined text-[20px]">task_alt</span> Tersimpan di Jurnal!';
+          submitBtn.classList.replace('bg-primary', 'bg-tertiary-container');
+          submitBtn.classList.replace('text-on-primary', 'text-on-tertiary-container');
+          isCompleted = true;
+        }
+      });
+    }
+  })();
+</script></main></body></html>

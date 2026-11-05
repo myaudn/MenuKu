@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary-fixed-variant": "#723600", "on-tertiary-fixed": "#002204", "secondary-fixed": "#ffdcc6", "on-primary-fixed": "#002204", "primary-container": "#2e7d32", "inverse-primary": "#88d982", "primary-fixed-dim": "#88d982", "on-primary-container": "#cbffc2", "on-secondary": "#ffffff", "surface-container-low": "#f4f4ee", "surface-bright": "#fafaf4", "error": "#ba1a1a", "surface": "#fafaf4", "surface-container-highest": "#e3e3de", "on-tertiary-fixed-variant": "#005312", "surface-container": "#eeeee9", "on-tertiary": "#ffffff", "on-secondary-fixed": "#311300", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "inverse-surface": "#2f312e", "surface-dim": "#dadad5", "on-error": "#ffffff", "primary": "#0d631b", "on-primary": "#ffffff", "on-secondary-container": "#5e2c00", "error-container": "#ffdad6", "on-primary-fixed-variant": "#005312", "inverse-on-surface": "#f1f1ec", "surface-container-high": "#e8e8e3", "on-surface": "#1a1c19", "secondary-fixed-dim": "#ffb786", "on-tertiary-container": "#ccffc3", "surface-tint": "#1b6d24", "surface-variant": "#e3e3de", "on-surface-variant": "#40493d", "tertiary-fixed-dim": "#82db7e", "outline-variant": "#bfcaba", "background": "#fafaf4", "outline": "#707a6c", "tertiary-container": "#267e2e", "on-background": "#1a1c19", "secondary": "#964900", "tertiary": "#006418", "secondary-container": "#fc820c", "tertiary-fixed": "#9df898", "primary-fixed": "a3f69c" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "margin": "1rem", "space-md": "1rem", "margin-tablet": "1.5rem", "space-lg": "1.5rem", "gutter": "1rem", "space-sm": "0.5rem", "gutter-sm": "0.75rem", "space-xs": "0.25rem" }, "fontFamily": { "headline-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"] }, "fontSize": { "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "fontWeight": "600" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "fontWeight": "700" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "display-lg": ["44px", { "lineHeight": "52px", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fafaf4;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs"><button aria-label="Kembali" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Tambah Item Belanja</h1></div><div class="flex items-center gap-space-xs"><button aria-label="Notifikasi" class="w-11 h-11 relative flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-secondary-container"></span></button><button aria-label="Profil Pengguna" class="w-11 h-11 flex items-center justify-center rounded-full hover:opacity-90 transition-opacity" type="button"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Form Container -->
+<form class="flex flex-col w-full px-margin pb-space-xl gap-space-lg" id="shopping-item-form" onsubmit="event.preventDefault(); triggerSuccessToast();">
+<!-- Header Greeting & Visual Delight Card -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-lg p-space-md shadow-sm">
+<div class="flex items-start justify-between relative z-10">
+<div class="flex-1 pr-space-sm">
+<div class="inline-flex items-center gap-space-xs bg-primary/10 text-primary px-2.5 py-0.5 rounded-full mb-1.5">
+<span class="material-symbols-outlined text-[14px]">kitchen</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Kebutuhan Dapur</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Tambah Item Belanja</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Lengkapi stok bahan agar sesi masak makin menyenangkan.</p>
+</div>
+<div class="w-14 h-14 rounded-2xl overflow-hidden shrink-0 shadow-sm bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="Fresh organic market produce including bright red chili peppers, fresh garlic cloves, and crisp green lime sitting on an earthy rustic ceramic plate under soft morning kitchen light with warm vibrant tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4Fnk5N9Pr4vtZFyQfAnAcfHNKFonySfXYI-T4hnhttnoMo9h71Ytz_GoNgs-19WdMwuu0h_oLD5s8-btm4wIBBYn89ML-o3TRu1FPxFM3rL4WIHJL3E0JctYq4JfJusPv5qYjf1F6Hy0Us5f3xQ-IXgsiZMdNczjUejGga7Nj_8vJZF2L1XcaEZVGn-t9k4akTg02bjRSIZdrNLDCqxVRTu-55uOTyh-bK5H-4hSd"/>
+</div>
+</div>
+<!-- Subtle Decorative Accent Background -->
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-fixed/30 pointer-events-none blur-xl"></div>
+</div>
+<!-- Field 1: Nama Bahan Masakan & Quick Suggestions -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface flex items-center justify-between" for="item-name">
+<span>Nama Bahan Masakan <span class="text-error">*</span></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Wajib diisi</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px] pointer-events-none">restaurant</span>
+<input class="w-full h-12 pl-11 pr-10 rounded-xl bg-surface-container font-body-md text-body-md text-on-surface placeholder:text-outline outline-none transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0d631b]" id="item-name" placeholder="Contoh: Daging Dada Ayam, Bawang Merah..." required="" type="text"/>
+<button aria-label="Bersihkan teks" class="hidden absolute right-3 w-7 h-7 flex items-center justify-center rounded-full text-on-surface-variant hover:bg-surface-container-high transition-colors" id="clear-name-btn" onclick="document.getElementById('item-name').value = ''; this.classList.add('hidden');" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Quick Chips Suggestions -->
+<div class="flex flex-col gap-1.5 mt-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Rekomendasi Cepat:</span>
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar -mx-margin px-margin">
+<button class="chip-item shrink-0 h-8 px-3 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center gap-1" onclick="selectSuggestion('Bawang Merah', 'bumbu')" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Bawang Merah
+          </button>
+<button class="chip-item shrink-0 h-8 px-3 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center gap-1" onclick="selectSuggestion('Daun Jeruk Purut', 'bumbu')" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Daun Jeruk
+          </button>
+<button class="chip-item shrink-0 h-8 px-3 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center gap-1" onclick="selectSuggestion('Santan Kelapa Instan', 'sembako')" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Santan Instan
+          </button>
+<button class="chip-item shrink-0 h-8 px-3 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center gap-1" onclick="selectSuggestion('Cabai Rawit Merah', 'sayur')" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Cabai Rawit
+          </button>
+<button class="chip-item shrink-0 h-8 px-3 rounded-full bg-surface-container-high text-on-surface hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant transition-all font-label-md text-label-md flex items-center gap-1" onclick="selectSuggestion('Daging Dada Ayam', 'protein')" type="button">
+<span class="material-symbols-outlined text-[14px]">add</span> Dada Ayam
+          </button>
+</div>
+</div>
+</div>
+<!-- Field 2: Grid Jumlah & Pilihan Satuan -->
+<div class="grid grid-cols-12 gap-space-sm">
+<!-- Input Kuantitas dengan Stepper -->
+<div class="col-span-6 flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="quantity-input">Jumlah</label>
+<div class="relative flex items-center h-12 bg-surface-container rounded-xl overflow-hidden px-1">
+<button aria-label="Kurangi kuantitas" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface bg-surface-container-lowest active:scale-95 shadow-sm transition-all" onclick="adjustQuantity(-50)" type="button">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-full text-center bg-transparent font-headline-sm text-headline-sm text-on-surface outline-none" id="quantity-input" min="1" step="any" type="number" value="500"/>
+<button aria-label="Tambah kuantitas" class="w-9 h-9 rounded-lg flex items-center justify-center text-on-surface bg-surface-container-lowest active:scale-95 shadow-sm transition-all" onclick="adjustQuantity(50)" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+<!-- Dropdown Satuan MD3 Styled -->
+<div class="col-span-6 flex flex-col gap-space-xs">
+<label class="font-label-lg text-label-lg text-on-surface" for="unit-select">Satuan Takar</label>
+<div class="relative flex items-center">
+<select class="w-full h-12 px-3.5 pr-8 appearance-none rounded-xl bg-surface-container font-label-lg text-label-lg text-on-surface outline-none transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0d631b]" id="unit-select">
+<option selected="" value="gr">Gram (gr)</option>
+<option value="kg">Kilogram (kg)</option>
+<option value="pcs">Bungkus / Pcs</option>
+<option value="btg">Batang</option>
+<option value="lbr">Lembar</option>
+<option value="ikat">Ikat</option>
+<option value="sdm">Sendok Makan (sdm)</option>
+<option value="sdt">Sendok Teh (sdt)</option>
+<option value="ltr">Liter (L)</option>
+<option value="ml">Mililiter (ml)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[20px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Field 3: Kategori Item Belanja Grid Cards -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Kategori Belanja</span>
+<div class="grid grid-cols-2 gap-2" id="category-group" role="radiogroup">
+<!-- Sayur & Buah -->
+<label class="category-card relative flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.98]">
+<input class="peer sr-only" name="item_category" type="radio" value="sayur"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-primary peer-checked:bg-primary peer-checked:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">nutrition</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface peer-checked:font-bold truncate">Sayur &amp; Buah</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Segar pasar</span>
+</div>
+<div class="absolute right-2 top-2 hidden peer-checked:block text-primary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</label>
+<!-- Bumbu & Rempah -->
+<label class="category-card relative flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.98]">
+<input checked="" class="peer sr-only" name="item_category" type="radio" value="bumbu"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary peer-checked:bg-secondary peer-checked:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface peer-checked:font-bold truncate">Bumbu Rempah</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Aroma &amp; rasa</span>
+</div>
+<div class="absolute right-2 top-2 hidden peer-checked:block text-secondary">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</label>
+<!-- Daging & Protein -->
+<label class="category-card relative flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.98]">
+<input class="peer sr-only" name="item_category" type="radio" value="protein"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-error peer-checked:bg-error peer-checked:text-on-error transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">set_meal</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface peer-checked:font-bold truncate">Daging &amp; Telur</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Protein utama</span>
+</div>
+<div class="absolute right-2 top-2 hidden peer-checked:block text-error">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</label>
+<!-- Sembako & Pokok -->
+<label class="category-card relative flex items-center gap-2.5 p-3 rounded-xl bg-surface-container cursor-pointer transition-all active:scale-[0.98]">
+<input class="peer sr-only" name="item_category" type="radio" value="sembako"/>
+<div class="w-10 h-10 rounded-xl bg-surface-container-highest flex items-center justify-center text-secondary-container peer-checked:bg-secondary-container peer-checked:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">grain</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface peer-checked:font-bold truncate">Sembako Pokok</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Beras, minyak, dsb</span>
+</div>
+<div class="absolute right-2 top-2 hidden peer-checked:block text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+</div>
+</label>
+</div>
+<!-- Lain-lain Category Pill -->
+<label class="relative flex items-center justify-between px-3.5 py-2.5 rounded-xl bg-surface-container cursor-pointer transition-all mt-0.5">
+<div class="flex items-center gap-2.5">
+<input class="peer sr-only" name="item_category" type="radio" value="lainnya"/>
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">shopping_basket</span>
+<span class="font-label-md text-label-md text-on-surface peer-checked:font-bold">Lain-lain / Perlengkapan Dapur</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">radio_button_unchecked</span>
+</label>
+</div>
+<!-- Field 4: Hubungkan ke Resep (Opsional) -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[16px]">menu_book</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface">Kaitkan ke Resep MenuKu</span>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container px-2 py-0.5 rounded-full text-on-surface-variant">Opsional</span>
+</div>
+<!-- Recipe Selector with Thumbnail -->
+<div class="relative flex items-center bg-surface-container-lowest rounded-xl p-2 shadow-sm">
+<div class="w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional Indonesian yellow spiced chicken soup soto ayam lamongan served in a handcrafted clay bowl garnished with fresh shredded cabbage, vermicelli noodles, and fragrant koya powder." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQRQBkkCTDrydQtQi9APIF87cNFUR2sPxx5D0An8doqTgdMc1t6YWQPbJQ5qOAL9NY8WwoP_QE-FG-FNS-E9baiNn_7TvLksYmYU3ZHB_tRi3krx_YMsExAIBNWoAVSZj4eMbkXhcQIcWjup3xQFu-MPE6asI60xSaiLzISjtu9ntM3M_80Hp6EP2RNQ8uPmsqGQVaZDnt-yhur13zUX4ry5_f_E0SP_0oOEnpDGNW"/>
+</div>
+<div class="flex-1 ml-3 min-w-0 pr-6">
+<select class="w-full bg-transparent font-label-md text-label-md text-on-surface font-semibold outline-none appearance-none cursor-pointer" id="linked-recipe">
+<option selected="" value="soto-ayam">Soto Ayam Lamongan</option>
+<option value="rendang-sapi">Rendang Sapi Minang</option>
+<option value="sayur-asem">Sayur Asem Segar Sunda</option>
+<option value="tumis-kangkung">Tumis Kangkung Terasi</option>
+<option value="none">-- Tanpa Tautan Resep --</option>
+</select>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Rencana Menu: Santap Malam Ini</p>
+</div>
+<span class="material-symbols-outlined absolute right-3 pointer-events-none text-on-surface-variant text-[18px]">unfold_more</span>
+</div>
+</div>
+<!-- Field 5: Prioritas Pembelian (MD3 Segmented Button) -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-on-surface">Tingkat Urgensi</span>
+<div class="grid grid-cols-3 p-1 bg-surface-container rounded-xl gap-1" id="priority-selector">
+<button class="priority-btn active-priority flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm transition-all" onclick="setPriority(this, 'urgent')" type="button">
+<span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+<span class="mt-0.5 font-bold">Penting</span>
+</button>
+<button class="priority-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg text-on-surface-variant font-label-md text-label-md transition-all" onclick="setPriority(this, 'normal')" type="button">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+<span class="mt-0.5">Biasa</span>
+</button>
+<button class="priority-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg text-on-surface-variant font-label-md text-label-md transition-all" onclick="setPriority(this, 'low')" type="button">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span class="mt-0.5">Kapan Saja</span>
+</button>
+</div>
+</div>
+<!-- Field 6: Catatan Tambahan (Textarea) -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-lg text-label-lg text-on-surface" for="item-notes">Catatan Tambahan</label>
+<span class="font-label-sm text-label-sm text-outline">Maks. 120 huruf</span>
+</div>
+<div class="relative">
+<textarea class="w-full p-3.5 rounded-xl bg-surface-container font-body-md text-body-md text-on-surface placeholder:text-outline outline-none resize-none transition-all focus:bg-surface-container-lowest focus:shadow-[0_0_0_2px_#0d631b]" id="item-notes" maxlength="120" placeholder="Contoh: Beli di pasar pagi langganan, pilih yang tidak terlalu layu atau basah..." rows="3"></textarea>
+<span class="material-symbols-outlined absolute right-3 bottom-3 text-outline text-[16px] pointer-events-none">edit_note</span>
+</div>
+</div>
+<!-- Sticky Floating Action Buttons -->
+<div class="flex flex-col gap-2 pt-2">
+<!-- Tombol Simpan (Filled Primary Kapsul 48px) -->
+<button class="w-full h-12 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-[0.99] transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">add_shopping_cart</span>
+<span>Simpan ke Daftar Belanja</span>
+</button>
+<!-- Tombol Batal (Tonal Neutral) -->
+<button class="w-full h-11 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg flex items-center justify-center transition-colors" onclick="window.history.back()" type="button">
+<span>Batal</span>
+</button>
+</div>
+</form>
+<!-- Interactive Delight Toast Feedback (Hidden by default) -->
+<div class="fixed bottom-6 left-margin right-margin z-50 transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="toast-success">
+<div class="bg-inverse-surface text-inverse-on-surface p-3.5 rounded-xl flex items-center gap-3 shadow-lg">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[18px]">done</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md font-bold" id="toast-title">Berhasil Ditambahkan!</p>
+<p class="font-body-sm text-body-sm text-surface-dim truncate" id="toast-desc">Item masuk dalam daftar belanja Anda.</p>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Stepper Handler
+  function adjustQuantity(delta) {
+    const qtyInput = document.getElementById('quantity-input');
+    let currentVal = parseFloat(qtyInput.value) || 0;
+    currentVal = Math.max(1, currentVal + delta);
+    qtyInput.value = currentVal;
+  }
+
+  // Quick Chips Selection Helper
+  function selectSuggestion(name, categoryValue) {
+    const input = document.getElementById('item-name');
+    input.value = name;
+    
+    const clearBtn = document.getElementById('clear-name-btn');
+    if (clearBtn) clearBtn.classList.remove('hidden');
+
+    // Select matched radio category
+    const radios = document.getElementsByName('item_category');
+    for (const r of radios) {
+      if (r.value === categoryValue) {
+        r.checked = true;
+        break;
+      }
+    }
+  }
+
+  // Monitor Input Name for Clear Button
+  document.getElementById('item-name')?.addEventListener('input', function(e) {
+    const clearBtn = document.getElementById('clear-name-btn');
+    if (e.target.value.length > 0) {
+      clearBtn?.classList.remove('hidden');
+    } else {
+      clearBtn?.classList.add('hidden');
+    }
+  });
+
+  // Urgency / Priority Segmented Button Switcher
+  function setPriority(btnElement, level) {
+    const buttons = document.querySelectorAll('.priority-btn');
+    buttons.forEach(btn => {
+      btn.className = 'priority-btn flex flex-col items-center justify-center py-2 px-1 rounded-lg text-on-surface-variant font-label-md text-label-md transition-all';
+      btn.querySelector('span:last-child').className = 'mt-0.5';
+    });
+
+    if (level === 'urgent') {
+      btnElement.className = 'priority-btn active-priority flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md shadow-sm transition-all';
+      btnElement.querySelector('span:last-child').className = 'mt-0.5 font-bold';
+    } else if (level === 'normal') {
+      btnElement.className = 'priority-btn active-priority flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md shadow-sm transition-all';
+      btnElement.querySelector('span:last-child').className = 'mt-0.5 font-bold';
+    } else {
+      btnElement.className = 'priority-btn active-priority flex flex-col items-center justify-center py-2 px-1 rounded-lg bg-surface-container-lowest text-outline font-label-md text-label-md shadow-sm transition-all';
+      btnElement.querySelector('span:last-child').className = 'mt-0.5 font-bold';
+    }
+  }
+
+  // Toast Micro-interaction Trigger
+  function triggerSuccessToast() {
+    const nameInput = document.getElementById('item-name').value || 'Bahan Belanja';
+    const qty = document.getElementById('quantity-input').value;
+    const unit = document.getElementById('unit-select').options[document.getElementById('unit-select').selectedIndex].text;
+    
+    const toast = document.getElementById('toast-success');
+    const toastTitle = document.getElementById('toast-title');
+    const toastDesc = document.getElementById('toast-desc');
+
+    toastTitle.textContent = `${nameInput} Ditambahkan!`;
+    toastDesc.textContent = `Tersimpan: ${qty} ${unit} ke keranjang belanja.`;
+
+    toast.classList.remove('translate-y-32', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+
+    setTimeout(() => {
+      toast.classList.remove('translate-y-0', 'opacity-100');
+      toast.classList.add('translate-y-32', 'opacity-0');
+    }, 2800);
+  }
+</script></main></body></html>
